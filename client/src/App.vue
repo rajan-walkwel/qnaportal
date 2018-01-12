@@ -1,12 +1,21 @@
 <template>
   <div id="app">
-    <router-view/>
+    <Layout>
+      <page-header />
+      <Content :style="{margin: '88px 20px 0', background: '#fff', minHeight: '500px'}">
+        <router-view/>
+      </Content>
+    </Layout>
   </div>
 </template>
 
 <script>
+import PageHeader from "@/components/Header";
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    PageHeader
+  }
 }
 </script>
 
@@ -17,6 +26,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.ivu-input {
+    margin-bottom: 10px !important;
 }
 </style>

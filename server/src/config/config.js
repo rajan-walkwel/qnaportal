@@ -8,5 +8,8 @@ module.exports = {
             dialect: process.env.DIALECT || 'sqlite',
             storage: './qnaportal.sqlite'
         }
+    },
+    authentication: {
+        jwtSecret: process.env.JWT_SECRET || 'secret'
     }
 }
